@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Disallow:/mis8/dashboard
+Disallow:/mis8/blah
+Disallow:/mis8/error
+Disallow:/mis8/pass
+Disallow:/mis8/key.txt

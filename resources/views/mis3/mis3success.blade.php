@@ -243,8 +243,8 @@ window.onclick = function(event) {
 
   
   <footer id="MyFooter">
-    <div class="footer">
-      <h4>Footer</h4>
+    <div class="footer" style="padding: 10px">
+      Team Evriskon -> P.N.R.S Fernando (IT18049732), K.G.R.U Ishara (IT18053760)
     </div>
 
   </footer>

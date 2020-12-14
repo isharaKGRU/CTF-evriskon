@@ -33,71 +33,51 @@
         <style>
             body {
                 font-family: 'Nunito';
-                background-image: url("{{ URL::to('/img/CamoBack.jpg') }}");
             }
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                        @endif
-                    @endif
-                </div>
-            @endif
+        
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="w3-top">
   <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-    <a href="/" class="w3-bar-item w3-button w3-theme-l1">Evrískon</a>
-  
+    <a href="/mis1suc" class="w3-bar-item w3-button w3-theme-l1">Evrískon</a>
+    
+    <div class="right">
+     <form method="POST" action="{{ route('logout') }}">
+                            @csrf
 
+                            <x-jet-dropdown-link href="{{ route('logout') }}" class="w3-bar-item w3-button w3-theme-l1"
+                                                onclick="event.preventDefault();
+                                                            this.closest('form').submit();">
+                                {{ __('Logout') }}
+                            </x-jet-dropdown-link>
+                        </form>
+    
+      </div>
   
   </div>
 </div>    
-                <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
-    <i class="fa fa-remove"></i>
-  </a>
-  <h4 class="w3-bar-item"><b>Menu</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/">Home</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis1">Mission 1</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis2">Mission 2</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis3">Mission 3</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis4">Mission 4</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis5">Mission 5</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis6">Mission 6</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis7">Mission 7</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis8">Mission 8</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis9">Mission 9</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="/mis10">Mission 10</a>
-</nav>
+                
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="text-block">
-<div style="margin-top:20px"><center><h1>What is Evriskon?</h1></center></div>
+<div style="margin-top:20px"><center><h1>Mission 8</h1></center></div>
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:20px;margin-bottom:50px;margin-right: 20px">
-<p>Evriskon is a CTF developed to test the participant's challenge-response skills and test their knowledge on web inspection, cryptography, information hiding techniques, decision making, time management, encrypting and decrypting skills, hidden clues finding, data analyzing and decision making, find patterns, guessing passwords, most importantly server-side security and web application security. This CTF is specifically developed for military applicants who wish to participate in cybersecurity-related crime investigations. They must perform several tasks to capture the flag. To succeed, they must use some tools like Wireshark, burp suite, crypto tool, and any other software they need. All together there some hidden clues players must find to finish this CTF.</p> 
-
-<p>Participants must finish all the missions to protect their country from Terrorist Attacks and to bring peace.</p> 
-
+<div style="padding-right: 550px" >
+<a href="/mis8/download" class="w3-bar-item w3-button w3-theme-l1"">Download Now </a></br>
+</div>
 
 
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
-    
+    background-image: url("{{ URL::to('/img/CamoBack.jpg') }}");
     }
 
 .text-block {
@@ -105,14 +85,13 @@ body {
   bottom:auto ;
   right: 5%;
   top: 20%;
-  left: 20%;
+  left: 5%;
   background-color: #3c7c33;
   color: white;
   padding-left: 10px;
   padding-right: 10px;
   margin: auto;
 }
-
 
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -155,6 +134,11 @@ button:hover {
   background-color: #f44336;
 }
 
+.right {
+  position: absolute;
+  right: 0px;
+  
+}
 
 .container {
   padding: 16px;

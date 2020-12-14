@@ -72,7 +72,7 @@
 <div class="w3-main" style="margin-left:20px;margin-bottom:50px;margin-right: 20px">
 
 
-
+<!-- dGhpcyBiYXNlNjQgY29kZSBpcyB0aGUgcGFzc3dvcmQgZm9yIHVubG9jayB0aGUgZmlsZSB3aGljaCBpbmNsdWRlIHRoZSBsb2N0aW9uIG9mIGF0dGFjayA9IFM5amFzaDJOSlNra3NqM2RuV0p2QkxmWUhTczBuZmZGRGxHa2RKbXNucg== -->
 
 
 <style>
@@ -243,8 +243,8 @@ window.onclick = function(event) {
 
   
   <footer id="MyFooter">
-    <div class="footer">
-      <h4>Footer</h4>
+    <div class="footer" style="padding: 10px">
+      Team Evriskon -> P.N.R.S Fernando (IT18049732), K.G.R.U Ishara (IT18053760)
     </div>
 
   </footer>

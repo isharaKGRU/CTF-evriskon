@@ -23,6 +23,11 @@ class RouteServiceProvider extends ServiceProvider
     public const M3_HOME = 'mis3/dashboard';
     public const M4_HOME = 'mis4/dashboard';
     public const M5_HOME = 'mis5/dashboard';
+    public const M6_HOME = 'mis6/dashboard';
+    public const M7_HOME = 'mis7/dashboard';
+    public const M8_HOME = 'mis8/dashboard';
+    public const M9_HOME = 'mis9/dashboard';
+    public const M10_HOME = 'mis10/dashboard';
 
     /**
      * The controller namespace for the application.

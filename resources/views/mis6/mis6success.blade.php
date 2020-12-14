@@ -70,6 +70,7 @@
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:20px;margin-bottom:50px;margin-right: 20px">
 
+<div class="w3-main"  style="margin-left:310px;margin-bottom:50px;margin-right: 20px"> <img src="{{ URL::to('/img/key_to_the_next_level.jpg') }}"  width="460" height="auto"> </div>
 
 
 
@@ -242,8 +243,8 @@ window.onclick = function(event) {
 
   
   <footer id="MyFooter">
-    <div class="footer">
-      <h4>Footer</h4>
+    <div class="footer" style="padding: 10px">
+      Team Evriskon -> P.N.R.S Fernando (IT18049732), K.G.R.U Ishara (IT18053760)
     </div>
 
   </footer>

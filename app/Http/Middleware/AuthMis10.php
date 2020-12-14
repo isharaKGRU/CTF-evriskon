@@ -15,7 +15,7 @@ class AuthMis10
      * @return mixed
      */
     public function handle(Request $request, Closure $next)
-    {   
+    {
         if(session('usrtyp') == 'M10')
         {
             return $next($request);

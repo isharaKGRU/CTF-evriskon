@@ -91,7 +91,9 @@
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="w3-main" style="margin-left:20px;margin-bottom:50px;margin-right: 20px">
 
-
+<p>What you SEARCH may be disallowed.....</p>
+<p>Email - mis8@evriskon.lk
+</p>
 
 
 
@@ -263,8 +265,8 @@ window.onclick = function(event) {
 
   
   <footer id="MyFooter">
-    <div class="footer">
-      <h4>Footer</h4>
+    <div class="footer" style="padding: 10px">
+      Team Evriskon -> P.N.R.S Fernando (IT18049732), K.G.R.U Ishara (IT18053760)
     </div>
 
   </footer>

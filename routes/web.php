@@ -110,8 +110,14 @@ Route::middleware(['auth:sanctum', 'verified','authmis10'])->get('mis10/dashboar
 
 Route::group(['middleware' => ['auth', 'verified','authmis4']], function ()
 	{
-      Route::get('mis4/secret.txt', function ()    {
+      Route::get('mis4/key.txt', function ()    {
         return view('mis4.secret');
+    });
+      Route::get('mis4/home.php', function ()    {
+        return view('mis4.home1');
+    });
+      Route::get('mis4/log.php', function ()    {
+        return view('mis4.log');
     });
     });
 
@@ -119,11 +125,50 @@ Route::group(['middleware' => ['auth', 'verified','authmis4']], function ()
 Route::group(['middleware' => ['auth', 'verified','authmis5']], function ()
 	{
 		Route::get('/mis5/download', function(){
-      		$file = public_path()."/key5.rar";
+      		$file = public_path()."/Key6.rar";
       		$headers = array(
       			'Content-Type: application/rar',
       		);
 
       		return Response::download($file, "key.rar", $headers);
     	});
+    });
+
+Route::group(['middleware' => ['auth', 'verified','authmis8']], function ()
+	{
+      Route::get('mis8/key.txt', function ()    {
+        return view('mis8.key');
+    });
+      Route::get('mis8/pass', function ()    {
+        return view('mis8.pass');
+    });
+      Route::get('/mis8/download', function(){
+      		$file = public_path()."/Pass9.rar";
+      		$headers = array(
+      			'Content-Type: application/rar',
+      		);
+
+      		return Response::download($file, "pass.rar", $headers);
+    	});
+      Route::get('mis8/error', function ()    {
+        return view('mis8.error');
+    });
+      Route::get('mis8/blah', function ()    {
+        return view('mis8.blah');
+    });
+    });
+
+Route::group(['middleware' => ['auth', 'verified','authmis10']], function ()
+	{
+		Route::get('/mis10/download', function(){
+      		$file = public_path()."/img/location.jpg";
+      		$headers = array(
+      			'Content-Type: application/jpg',
+      		);
+
+      		return Response::download($file, "location.jpg", $headers);
+    	});
+    	Route::get('mis10/location', function ()    {
+        return view('mis10.location');
+    });
     });
