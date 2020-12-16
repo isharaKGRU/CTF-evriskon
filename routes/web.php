@@ -158,6 +158,25 @@ Route::group(['middleware' => ['auth', 'verified','authmis8']], function ()
     });
     });
 
+Route::group(['middleware' => ['auth', 'verified','authmis9']], function ()
+	{
+      Route::get('mis9/key', function ()    {
+        return view('mis9.key10');
+    });
+      Route::get('mis9/pass', function ()    {
+        return view('mis9.pass10');
+    });
+      Route::get('/mis9/download', function(){
+      		$file = public_path()."/Cry-DES-9.hex";
+      		$headers = array(
+      			'Content-Type: application/hex',
+      		);
+
+      		return Response::download($file, "pass.hex", $headers);
+    	});
+     
+    });
+
 Route::group(['middleware' => ['auth', 'verified','authmis10']], function ()
 	{
 		Route::get('/mis10/download', function(){
